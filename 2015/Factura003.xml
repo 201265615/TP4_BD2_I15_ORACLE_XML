@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FacturaCompra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://172.19.127.101:9090/grupo01/Facturas/xsd/FacturasCompra.xsd">
+  <NumeroFactura>3</NumeroFactura>
+  <FechaCompra>2015-06-15</FechaCompra>
+  <Proveedor>OfficeDepot</Proveedor>
+  <Usuario>Admin</Usuario>
+  <LineasFactura>
+    <LineaFactura NumeroLineaFactura="1">
+      <Articulo Codigo="MSBT1" Cantidad="12" CantMaxima="40" CantMinima="5" Descripcion="Mouse bluetooth"
+       EstadoArticulo="Activo" Familia="CPU" Marca="Dell" PrecioMercDolares="10" UnidadMedida="un"/>
+    </LineaFactura>
+    <LineaFactura NumeroLineaFactura="2">
+      <Articulo Codigo="RTC1800" Cantidad="10" CantMaxima="20" CantMinima="1" Descripcion="Router Cisco 1800"
+       EstadoArticulo="Activo" Familia="Enrutador" Marca="Cisco" PrecioMercDolares="200" UnidadMedida="un"/>
+    </LineaFactura>
+	<LineaFactura NumeroLineaFactura="3">
+      <Articulo Codigo="UPS110" Cantidad="5" CantMaxima="10" CantMinima="1" Descripcion="UPS 110v"
+       EstadoArticulo="Activo" Familia="Baterias" Marca="FPC" PrecioMercDolares="100" UnidadMedida="un"/>
+    </LineaFactura>
+	<LineaFactura NumeroLineaFactura="4">
+      <Articulo Codigo="PE2" Cantidad="30" CantMaxima="50" CantMinima="10" Descripcion="Parlantes escritorio"
+       EstadoArticulo="Activo" Familia="CPU" Marca="SoundAlive" PrecioMercDolares="50" UnidadMedida="un"/>
+    </LineaFactura>
+  </LineasFactura>
+</FacturaCompra>

@@ -1,0 +1,104 @@
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xdb="http://xmlns.oracle.com/xdb"
+  version="1.0"
+  xdb:storeVarrayAsTable="true">
+  <xs:element name="FacturaCompra" type="FacturaCompraType" xdb:defaultTable="FACTURAS_TABLE"/>
+  <xs:complexType name="FacturaCompraType" xdb:SQLType="FACTURACOMPRAS_TYPE">
+    <xs:sequence>
+      <xs:element name="NumeroFactura" type="NumeroFacturaType"/>
+      <xs:element name="FechaCompra" type="FechaCompraType"/>
+      <xs:element name="Proveedor" type="ProveedorType"/>
+      <xs:element name="Usuario" type="UsuarioType" minOccurs="1"/>
+      <xs:element name="LineasFactura" type="LineasFacturasType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineasFacturasType" xdb:SQLType="LISTALINEASFACTURA">
+    <xs:sequence>
+      <xs:element name="LineaFactura" type="LineaFacturaType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineaFacturaType" xdb:SQLType="LINEAFACTURA_TYPE">
+    <xs:sequence>
+      <xs:element name="Articulo" type="ArticuloType"/>
+    </xs:sequence>
+    <xs:attribute name="NumeroLineaFactura" type="xs:integer"
+                  xdb:SQLType="NUMBER"/>
+  </xs:complexType>
+  <xs:complexType name="ArticuloType" xdb:SQLType="ARTICULO_TYPE">
+    <xs:attribute name="Codigo" xdb:SQLType="VARCHAR2">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="Descripcion" type="DescripcionType" xdb:SQLType="VARCHAR2"/>
+    <xs:attribute name="PrecioMercDolares" type="MonedaType" xdb:SQLType="DECIMAL"/>
+    <xs:attribute name="UnidadMedida" type="UnidadMedidaType" xdb:SQLType="VARCHAR2"/>
+    <xs:attribute name="Marca" type="MarcaType"/>
+    <xs:attribute name="Familia" type="FamiliaType"/>
+    <xs:attribute name="Cantidad" type="CantidadType"/>
+    <xs:attribute name="CantMaxima" type="CantidadType"/>
+    <xs:attribute name="CantMinima" type="CantidadType"/>
+    <xs:attribute name="EstadoArticulo" type="EstadoArticuloType"/>
+  </xs:complexType>
+  <xs:simpleType name="MonedaType">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="2"/>
+      <xs:totalDigits value="17"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CantidadType">
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="4"/>
+      <xs:totalDigits value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UsuarioType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProveedorType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="128"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumeroFacturaType">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+  <xs:simpleType name="DescripcionType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnidadMedidaType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FamiliaType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MarcaType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EstadoArticuloType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FechaCompraType">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+</xs:schema>

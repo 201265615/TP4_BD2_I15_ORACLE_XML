@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FacturaCompra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://172.19.127.101:9090/grupo01/Facturas/xsd/FacturasCompra.xsd">
+  <NumeroFactura>1</NumeroFactura>
+  <FechaCompra>2015-06-12</FechaCompra>
+  <Proveedor>Compuamersa</Proveedor>
+  <Usuario>Admin</Usuario>
+  <LineasFactura>
+    <LineaFactura NumeroLineaFactura="1">
+      <Articulo Codigo="FP110" Cantidad="8" CantMaxima="20" CantMinima="5" Descripcion="Fuente de poder"
+       EstadoArticulo="Activo" Familia="CPU" Marca="Corsair" PrecioMercDolares="250" UnidadMedida="un"/>
+    </LineaFactura>
+    <LineaFactura NumeroLineaFactura="=2">
+      <Articulo Codigo="INCOHO" Cantidad="15" CantMaxima="30" CantMinima="7" Descripcion="Impresora Color"
+       EstadoArticulo="Activo" Familia="Impresoras" Marca="Epson" PrecioMercDolares="506" UnidadMedida="un"/>
+    </LineaFactura>
+     <LineaFactura NumeroLineaFactura="=3">
+      <Articulo Codigo="SCA" Cantidad="5" CantMaxima="10" CantMinima="2" Descripcion="Scanner"
+       EstadoArticulo="Activo" Familia="Scanner" Marca="Epson" PrecioMercDolares="306" UnidadMedida="un"/>
+    </LineaFactura>
+  </LineasFactura>
+</FacturaCompra>

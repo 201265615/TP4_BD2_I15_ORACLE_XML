@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FacturaCompra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://172.19.127.101:9090/grupo01/Facturas/xsd/FacturasCompra.xsd">
+  <NumeroFactura>1</NumeroFactura>
+  <FechaCompra>2015-06-12</FechaCompra>
+  <Proveedor>ATEK</Proveedor>
+  <Usuario>Admin</Usuario>
+  <LineasFactura>
+    <LineaFactura NumeroLineaFactura="1">
+      <Articulo Codigo="FTCO2175" Cantidad="10" CantMaxima="26" CantMinima="2" Descripcion="Pantalla Plana 21 pulg"
+       EstadoArticulo="Activo" Familia="Monitores" Marca="Sony" PrecioMercDolares="1000" UnidadMedida="un"/>
+    </LineaFactura>
+    <LineaFactura NumeroLineaFactura="2">
+      <Articulo Codigo="INCOHO" Cantidad="12" CantMaxima="20" CantMinima="7" Descripcion="Impresora Color"
+       EstadoArticulo="Activo" Familia="Impresoras" Marca="HP" PrecioMercDolares="570" UnidadMedida="un"/>
+    </LineaFactura>
+     <LineaFactura NumeroLineaFactura="3">
+      <Articulo Codigo="MOI" Cantidad="10" CantMaxima="20" CantMinima="7" Descripcion="Mouse Inalambrico"
+       EstadoArticulo="Activo" Familia="Mouses" Marca="Dell" PrecioMercDolares="70" UnidadMedida="un"/>
+    </LineaFactura>
+  </LineasFactura>
+</FacturaCompra>

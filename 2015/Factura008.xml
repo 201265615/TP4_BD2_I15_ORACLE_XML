@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FacturaCompra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://172.19.127.101:9090/grupo01/Facturas/xsd/FacturasCompra.xsd">
+  <NumeroFactura>1</NumeroFactura>
+  <FechaCompra>2015-06-12</FechaCompra>
+  <Proveedor>COCOCO</Proveedor>
+  <Usuario>Admin</Usuario>
+  <LineasFactura>
+    <LineaFactura NumeroLineaFactura="1">
+      <Articulo Codigo="INCOHO" Cantidad="45" CantMaxima="50" CantMinima="17" Descripcion="Impresora Color Multiuso"
+       EstadoArticulo="Activo" Familia="Impresoras" Marca="Brother" PrecioMercDolares="486" UnidadMedida="un"/>
+    </LineaFactura>
+      <LineaFactura NumeroLineaFactura="2">
+      <Articulo Codigo="TEIG" Cantidad="45" CantMaxima="10" CantMinima="7" Descripcion="Teclado Inalambrico Gamer"
+       EstadoArticulo="Activo" Familia="Teclados" Marca="Logitech" PrecioMercDolares="86" UnidadMedida="un"/>
+    </LineaFactura>
+  </LineasFactura>
+</FacturaCompra>
